@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SunGarner Energies Ltd - Reliable, Efficient & Cost-effective Energy Solutions</title>
+  <meta name="description" content="SunGarner Energies Ltd is a leading power products manufacturer and solar solution provider since 2015. Solar inverters, batteries, PV modules, EPC services and EV products.">
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sg-primary: #1a5c2a;
+      --sg-primary-dark: #134a20;
+      --sg-accent: #f5a623;
+      --sg-light: #e8f5e9;
+      --sg-dark: #1e293b;
+      --sg-body: #67768e;
+      --sg-white: #ffffff;
+      --sg-gray: #F2F5F7;
+      --sg-border: #e0e0e0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--sg-body);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      color: var(--sg-dark);
+    }
+
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.4rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.1rem; }
+    h5 { font-size: 1rem; }
+    h6 { font-size: 0.85rem; }
+
+    a { text-decoration: none; }
+    a:hover { color: var(--sg-primary); }
+
+    /* Buttons */
+    .btn-sg {
+      background-color: var(--sg-primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 1rem 2.25rem;
+      border-radius: 50px;
+      border: none;
+      transition: all 0.3s ease;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-sg:hover {
+      background-color: var(--sg-primary-dark);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(26, 92, 42, 0.35);
+    }
+    .btn-sg-outline {
+      background: transparent;
+      border: 2px solid var(--sg-primary);
+      color: var(--sg-primary);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 1rem 2.25rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-sg-outline:hover {
+      background-color: var(--sg-primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .btn-sg-accent {
+      background-color: var(--sg-accent);
+      color: var(--sg-dark);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 1rem 2.25rem;
+      border-radius: 50px;
+      border: none;
+      transition: all 0.3s ease;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-sg-accent:hover {
+      background-color: #e0951e;
+      color: var(--sg-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(245, 166, 35, 0.4);
+    }
+
+    /* SunGarner Logo (CSS-based) */
+    .sg-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .sg-logo .logo-mark {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sg-primary), #2e7d32);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 14px rgba(26, 92, 42, 0.35);
+      transition: all 0.3s;
+    }
+    .sg-logo:hover .logo-mark {
+      transform: rotate(-5deg) scale(1.05);
+      box-shadow: 0 6px 20px rgba(26, 92, 42, 0.45);
+    }
+    .sg-logo .logo-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--sg-primary);
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+    .sg-logo .logo-text small {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      color: var(--sg-accent);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .sg-logo-light .logo-text {
+      color: #ffffff;
+    }
+    .sg-logo-light .logo-text small {
+      color: var(--sg-accent);
+    }
+
+    /* Navbar */
+    .navbar-sg {
+      background: var(--sg-white);
+      padding: 1rem 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      transition: all 0.3s;
+    }
+    .navbar-sg .nav-link {
+      color: var(--sg-dark) !important;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 0.5rem 1rem !important;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .navbar-sg .nav-link:hover,
+    .navbar-sg .nav-link.active {
+      color: var(--sg-primary) !important;
+    }
+    .navbar-sg .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--sg-primary);
+      transition: width 0.3s;
+    }
+    .navbar-sg .nav-link:hover::after {
+      width: 60%;
+    }
+    .navbar-sg .dropdown-menu {
+      border: none;
+      border-top: 3px solid var(--sg-primary);
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      padding: 1rem 1.5rem;
+      min-width: 240px;
+    }
+    .navbar-sg .dropdown-item {
+      font-size: 0.88rem;
+      padding: 0.5rem 0;
+      color: var(--sg-dark);
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .navbar-sg .dropdown-item:hover {
+      background: transparent;
+      color: var(--sg-primary);
+      padding-left: 6px;
+    }
+
+    /* Hero Section */
+    .hero-sg {
+      position: relative;
+      min-height: 90vh;
+      background: linear-gradient(135deg, #0d2818 0%, #1a5c2a 50%, #0d2818 100%);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-sg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&q=80') center/cover no-repeat;
+      opacity: 0.2;
+      animation: heroZoom 25s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+    .hero-sg .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-sg .badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 166, 35, 0.15);
+      border: 1px solid rgba(245, 166, 35, 0.5);
+      color: var(--sg-accent);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero-sg h1 {
+      color: #ffffff;
+      font-size: 3.4rem;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+    }
+    .hero-sg h1 span {
+      color: var(--sg-accent);
+    }
+    .hero-sg p.lead {
+      color: rgba(255,255,255,0.8);
+      font-weight: 400;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      max-width: 650px;
+      margin-bottom: 2rem;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat {
+      text-align: left;
+    }
+    .hero-stat .num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+    .hero-stat .lbl {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Section Styling */
+    .section-sg {
+      padding: 90px 0;
+    }
+    .section-sg-light {
+      background: var(--sg-gray);
+    }
+    .section-sg-white {
+      background: var(--sg-white);
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--sg-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* About Section */
+    .about-img-main {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+    .about-img-small {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .about-stat-box {
+      background: var(--sg-white);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border-bottom: 3px solid var(--sg-primary);
+      height: 100%;
+    }
+    .about-stat-box .num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--sg-primary);
+    }
+    .about-stat-box .lbl {
+      font-size: 0.82rem;
+      color: var(--sg-body);
+      margin-top: 4px;
+    }
+
+    /* Product Cards */
+    .product-card {
+      background: var(--sg-white);
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+      transition: all 0.35s ease;
+      border: 1px solid var(--sg-border);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(26, 92, 42, 0.15);
+      border-color: var(--sg-primary);
+    }
+    .product-card .prod-img-wrap {
+      height: 220px;
+      background: linear-gradient(135deg, var(--sg-light) 0%, #d0ead2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      overflow: hidden;
+    }
+    .product-card .prod-img-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.4s;
+    }
+    .product-card:hover .prod-img-wrap img {
+      transform: scale(1.08);
+    }
+    .product-card .prod-body {
+      padding: 1.5rem;
+    }
+    .product-card .prod-tag {
+      display: inline-block;
+      background: var(--sg-light);
+      color: var(--sg-primary);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 0.75rem;
+    }
+    .product-card h5 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .product-card p {
+      font-size: 0.88rem;
+      color: var(--sg-body);
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+    .product-card .prod-specs {
+      font-size: 0.78rem;
+      color: var(--sg-body);
+      border-top: 1px solid var(--sg-border);
+      padding-top: 0.75rem;
+    }
+    .product-card .prod-specs strong {
+      color: var(--sg-dark);
+    }
+
+    /* Feature Boxes */
+    .feature-box {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-radius: 20px;
+      background: var(--sg-white);
+      transition: all 0.3s;
+      height: 100%;
+      border: 2px solid transparent;
+    }
+    .feature-box:hover {
+      border-color: var(--sg-primary);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 40px rgba(26, 92, 42, 0.1);
+    }
+    .feature-box .f-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--sg-primary), #2e7d32);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      color: #fff;
+      font-size: 1.6rem;
+      box-shadow: 0 8px 20px rgba(26, 92, 42, 0.25);
+    }
+    .feature-box h5 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .feature-box p {
+      font-size: 0.88rem;
+      color: var(--sg-body);
+      margin-bottom: 0;
+    }
+
+    /* Testimonial Cards */
+    .testimonial-card-sg {
+      background: var(--sg-white);
+      border-radius: 20px;
+      padding: 2rem;
+      height: 100%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border-left: 4px solid var(--sg-primary);
+      transition: all 0.3s;
+    }
+    .testimonial-card-sg:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+    .testimonial-card-sg .quote-icon {
+      font-size: 1.5rem;
+      color: var(--sg-primary);
+      opacity: 0.3;
+      margin-bottom: 1rem;
+    }
+    .testimonial-card-sg p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      font-style: italic;
+      color: var(--sg-body);
+      margin-bottom: 1.25rem;
+    }
+    .testimonial-card-sg .client-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-card-sg .client-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sg-light), #c8e6c9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sg-primary);
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .testimonial-card-sg .client-name {
+      font-weight: 700;
+      color: var(--sg-dark);
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
+    .testimonial-card-sg .client-role {
+      font-size: 0.78rem;
+      color: var(--sg-body);
+    }
+
+    /* Client Logos */
+    .client-logo-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      height: 90px;
+      background: var(--sg-white);
+      border-radius: 16px;
+      border: 1px solid var(--sg-border);
+      transition: all 0.3s;
+      text-align: center;
+    }
+    .client-logo-box:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transform: translateY(-4px);
+      border-color: var(--sg-primary);
+    }
+    .client-logo-box .logo-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--sg-dark);
+      line-height: 1.3;
+    }
+    .client-logo-box .logo-sub {
+      font-size: 0.65rem;
+      color: var(--sg-body);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* EPC Section */
+    .epc-step {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--sg-border);
+    }
+    .epc-step:last-child {
+      border-bottom: none;
+    }
+    .epc-step .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--sg-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: var(--sg-primary);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .epc-step h5 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .epc-step p {
+      font-size: 0.88rem;
+      color: var(--sg-body);
+      margin-bottom: 0;
+    }
+
+    /* CTA Section */
+    .cta-sg {
+      background: linear-gradient(135deg, var(--sg-primary) 0%, #0d2818 100%);
+      border-radius: 30px;
+      padding: 4rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-sg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(245,166,35,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-sg h2 {
+      color: #fff;
+      position: relative;
+    }
+    .cta-sg p {
+      color: rgba(255,255,255,0.75);
+      position: relative;
+    }
+
+    /* Footer */
+    .footer-sg {
+      background: #0d2818;
+      color: rgba(255,255,255,0.65);
+      padding: 80px 0 0;
+    }
+    .footer-sg h5 {
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.5px;
+    }
+    .footer-sg a {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.88rem;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.3rem 0;
+    }
+    .footer-sg a:hover {
+      color: var(--sg-accent);
+      padding-left: 4px;
+    }
+    .footer-sg .footer-social a {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+      font-size: 1rem;
+      transition: all 0.3s;
+      padding: 0;
+    }
+    .footer-sg .footer-social a:hover {
+      background: var(--sg-accent);
+      color: var(--sg-dark);
+      padding-left: 0;
+      transform: translateY(-3px);
+    }
+    .footer-bottom-sg {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+    }
+    .footer-bottom-sg p {
+      font-size: 0.82rem;
+      margin-bottom: 0;
+    }
+    .footer-bottom-sg a {
+      display: inline;
+      padding: 0 0.75rem;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.82rem;
+    }
+    .footer-bottom-sg a:last-child { border-right: none; }
+
+    /* Theme Toggle */
+    .theme-toggle-sg {
+      background: var(--sg-light);
+      border: 1px solid var(--sg-border);
+      color: var(--sg-primary);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .theme-toggle-sg:hover {
+      background: var(--sg-primary);
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
+      .hero-sg h1 { font-size: 2.2rem; }
+      .hero-sg p.lead { font-size: 1rem; }
+      .section-sg { padding: 60px 0; }
+      .about-img-main { height: 300px; }
+      .about-img-small { height: 160px; }
+      .hero-stats { gap: 1.5rem; }
+      .hero-stat .num { font-size: 1.5rem; }
+    }
+    @media (max-width: 575.98px) {
+      h1 { font-size: 1.7rem; }
+      h2 { font-size: 1.4rem; }
+      .hero-sg h1 { font-size: 1.7rem; }
+      .btn-sg, .btn-sg-outline, .btn-sg-accent {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.9rem;
+      }
+      .sg-logo .logo-text { font-size: 1.2rem; }
+      .sg-logo .logo-mark { width: 40px; height: 40px; font-size: 1.1rem; }
+      .cta-sg { padding: 2.5rem 1.5rem; }
+    }
+
+    /* Dark Theme */
+    [data-bs-theme="dark"] body {
+      background: #0f172a;
+      color: #94a3b8;
+    }
+    [data-bs-theme="dark"] h1, [data-bs-theme="dark"] h2,
+    [data-bs-theme="dark"] h3, [data-bs-theme="dark"] h4,
+    [data-bs-theme="dark"] h5, [data-bs-theme="dark"] h6 {
+      color: #f1f5f9;
+    }
+    [data-bs-theme="dark"] .navbar-sg {
+      background: #1e293b;
+    }
+    [data-bs-theme="dark"] .navbar-sg .nav-link {
+      color: #cbd5e1 !important;
+    }
+    [data-bs-theme="dark"] .navbar-sg .nav-link:hover {
+      color: var(--sg-accent) !important;
+    }
+    [data-bs-theme="dark"] .section-sg-light {
+      background: #1e293b;
+    }
+    [data-bs-theme="dark"] .section-sg-white {
+      background: #0f172a;
+    }
+    [data-bs-theme="dark"] .product-card,
+    [data-bs-theme="dark"] .feature-box,
+    [data-bs-theme="dark"] .testimonial-card-sg,
+    [data-bs-theme="dark"] .client-logo-box,
+    [data-bs-theme="dark"] .about-stat-box {
+      background: #1e293b;
+      border-color: #334155;
+    }
+    [data-bs-theme="dark"] .product-card .prod-img-wrap {
+      background: linear-gradient(135deg, #1a2e1a 0%, #1e3a1e 100%);
+    }
+    [data-bs-theme="dark"] .epc-step {
+      border-color: #334155;
+    }
+    [data-bs-theme="dark"] .sg-logo .logo-text {
+      color: #f1f5f9;
+    }
+    [data-bs-theme="dark"] .footer-sg {
+      background: #020617;
+    }
+    [data-bs-theme="dark"] .theme-toggle-sg {
+      background: #334155;
+      border-color: #475569;
+      color: #f1f5f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-sg sticky-top" id="mainNav">
+    <div class="container">
+      <a class="sg-logo" href="#">
+        <div class="logo-mark"><i class="fas fa-sun"></i></div>
+        <div class="logo-text">SunGarner<small>Energies Ltd</small></div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavContent">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">About SunGarner</a></li>
+              <li><a class="dropdown-item" href="#">Why Choose Us</a></li>
+              <li><a class="dropdown-item" href="#">Our Clients</a></li>
+              <li><a class="dropdown-item" href="#">News & Events</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Solar Inverters</a></li>
+              <li><a class="dropdown-item" href="#">Tall Tubular Batteries</a></li>
+              <li><a class="dropdown-item" href="#">PV Modules</a></li>
+              <li><a class="dropdown-item" href="#">E-Rickshaw Chargers</a></li>
+              <li><a class="dropdown-item" href="#">Online UPS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Solar EPC</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item ms-2">
+            <button class="theme-toggle-sg" id="themeToggle" title="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-sg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <span class="badge-tag"><i class="fas fa-leaf"></i> Since 2015 · ISO 9001:2015 Certified</span>
+          <h1>Reliable, Efficient & <span>Cost-effective</span> Energy Solutions</h1>
+          <p class="lead">SunGarner Energies Ltd is the leading power products manufacturer and solar solution provider. We design, engineer, and implement solar Off Grid and On Grid Power Plants across India and abroad.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#" class="btn btn-sg-accent"><i class="fas fa-solar-panel"></i> Explore Products</a>
+            <a href="#" class="btn btn-sg-outline" style="border-color:#fff;color:#fff;"><i class="fas fa-phone"></i> Get a Quote</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="num">100+</div>
+              <div class="lbl">Large Projects</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num">26</div>
+              <div class="lbl">States Supplied</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num">7</div>
+              <div class="lbl">Countries Exported</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num">10+</div>
+              <div class="lbl">MW Solar Deployed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section-sg section-sg-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-12">
+              <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80" alt="SunGarner Solar Installation" class="about-img-main">
+            </div>
+            <div class="col-6">
+              <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?w=600&q=80" alt="Solar Inverter Manufacturing" class="about-img-small">
+            </div>
+            <div class="col-6">
+              <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Solar Farm" class="about-img-small">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="section-label">About SunGarner</span>
+          <h2 class="mb-4">Leading Power Products Manufacturer & Solar Solution Provider</h2>
+          <p class="mb-3">SunGarner Energies Ltd is the leading power products manufacturer and solar solution provider since 2015. In 2017, SunGarner established its first solar inverter manufacturing unit at Greater Noida, India, subsequently diversifying into energy storage and solar panels.[reference:0]</p>
+          <p class="mb-3">SunGarner has executed more than 100 large solar grid-tied projects ranging from 50kWp to 2MWP in India and abroad. SunGarner inverters have been supplied in 26 states of India from Leh to Tamil Nadu in a span of 6 years, and they are exporting to 7 countries internationally.[reference:1]</p>
+          <p class="mb-4">SunGarner caters to engineering projects and products for clients in India and overseas, focusing on reliable, efficient, and lowest cost energy solutions. Their services include design, engineering, and implementation of solar Off Grid and On Grid Power Plants.[reference:2]</p>
+          <div class="row g-3">
+            <div class="col-4">
+              <div class="about-stat-box">
+                <div class="num">100+</div>
+                <div class="lbl">Large Projects</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="about-stat-box">
+                <div class="num">26</div>
+                <div class="lbl">States Supplied</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="about-stat-box">
+                <div class="num">7</div>
+                <div class="lbl">Countries</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section-sg section-sg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Why Choose SunGarner</span>
+        <h2>Superior Performance, Maximum Output</h2>
+        <p class="mt-3 mx-auto" style="max-width: 600px;">SunGarner Energies is led by a visionary, cross-functional team with a decade of combined experience across various industries.[reference:3]</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="f-icon"><i class="fas fa-microscope"></i></div>
+            <h5>In-House R&D</h5>
+            <p>Offering a boutique of products under one roof with In-House R&D and Manufacturing units marketed in its state-of-the-art ISO 9001:2015 facility.[reference:4]</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="f-icon"><i class="fas fa-hard-hat"></i></div>
+            <h5>Turnkey EPC Solutions</h5>
+            <p>Comprehensive Solar EPC solutions provider with over a decade of experience delivering high-quality solar power plants across 26 Indian states.[reference:5]</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="f-icon"><i class="fas fa-chart-line"></i></div>
+            <h5>Growth Strategy</h5>
+            <p>Clear roadmap to scale solar power generation from 100 MW to 1,000 MW within 4 years, with a bold target of reaching 2 GW by 2030.[reference:6]</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="f-icon"><i class="fas fa-users"></i></div>
+            <h5>Customer-Centric Approach</h5>
+            <p>A value-based business model focused on delivering tailored solutions that create long-term benefits for customers and partners.[reference:7]</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="f-icon"><i class="fas fa-shield-alt"></i></div>
+            <h5>Quality Assurance</h5>
+            <p>Rigorous quality checks, vendor evaluation, and performance testing ensure safe, reliable, and high-performing solar power plants.[reference:8]</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="f-icon"><i class="fas fa-globe-asia"></i></div>
+            <h5>Global Presence</h5>
+            <p>Considerable business in Africa, Asia, and the Middle East with a strong domestic and global vendor network.[reference:9]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS SECTION ===== -->
+  <section class="section-sg section-sg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Our Products</span>
+        <h2>Power Solutions Under One Roof</h2>
+        <p class="mt-3 mx-auto" style="max-width: 600px;">A wide range of power solutions such as Solar Power, UPS, Batteries, Inverters, and EV Products.[reference:10]</p>
+      </div>
+      <div class="row g-4">
+
+        <!-- Solar Inverters -->
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="prod-img-wrap">
+              <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?w=600&q=80" alt="Solar Inverter">
+            </div>
+            <div class="prod-body">
+              <span class="prod-tag">Inverters</span>
+              <h5>Solar Inverters</h5>
+              <p>15-100 KVA MPPT, DSP-based technology with built-in isolation transformer and up to 60% energy savings.</p>
+              <div class="prod-specs">
+                <strong>Models:</strong> PWM (1-5 kVA), MPPT (1-10 kVA), MPPT (15-100 kVA), Sinewave (1-10 kVA)[reference:11]
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tall Tubular Batteries -->
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="prod-img-wrap">
+              <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=600&q=80" alt="Tall Tubular Battery">
+            </div>
+            <div class="prod-body">
+              <span class="prod-tag">Batteries</span>
+              <h5>Tall Tubular Batteries</h5>
+              <p>Reliable, long-lasting, and low-maintenance inverter tubular batteries under the "Seltrik" brand.[reference:12]</p>
+              <div class="prod-specs">
+                <strong>9 Models:</strong> 120Ah to 250Ah C20 · 1500 cycles @ 80% DOD[reference:13]
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PV Modules -->
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="prod-img-wrap">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="PV Module">
+            </div>
+            <div class="prod-body">
+              <span class="prod-tag">Solar Panels</span>
+              <h5>PV Modules</h5>
+              <p>Polycrystalline solar modules with 72 cells configuration, 200-325 Watt, 25 years limited warranty on power output.[reference:14]</p>
+              <div class="prod-specs">
+                <strong>Features:</strong> Anti-dust coating, anodized aluminum frame, bypass diodes[reference:15]
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- E-Rickshaw Chargers -->
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="prod-img-wrap">
+              <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="E-Rickshaw Charger">
+            </div>
+            <div class="prod-body">
+              <span class="prod-tag">EV Charging</span>
+              <h5>E-Rickshaw Chargers</h5>
+              <p>"Vault" series chargers with pre-programmed multi-stage charging profile and cell balancing.[reference:16]</p>
+              <div class="prod-specs">
+                <strong>Configurations:</strong> 48V/12A · 48V/15A · 48V/20A[reference:17]
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Online UPS -->
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="prod-img-wrap">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="Online UPS">
+            </div>
+            <div class="prod-body">
+              <span class="prod-tag">Power Backup</span>
+              <h5>Online UPS</h5>
+              <p>Manufactured under the SELTRIK brand, offering reliable power backup for critical applications.[reference:18]</p>
+              <div class="prod-specs">
+                <strong>Type:</strong> Online UPS systems for industrial and commercial use
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solar EPC -->
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="prod-img-wrap">
+              <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Solar EPC">
+            </div>
+            <div class="prod-body">
+              <span class="prod-tag">Services</span>
+              <h5>Solar EPC Solutions</h5>
+              <p>End-to-end EPC services from project concept and engineering to installation, commissioning, and final handover.[reference:19]</p>
+              <div class="prod-specs">
+                <strong>Scope:</strong> Design, Procurement, Construction, Quality Assurance
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EPC PROCESS SECTION ===== -->
+  <section class="section-sg section-sg-light">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="section-label">Solar EPC Services</span>
+          <h2 class="mb-4">End-to-End EPC Solutions</h2>
+          <p class="mb-4">SunGarner is a leading solar EPC company in India with over a decade of experience in delivering high-quality solar power plants. We have executed and are executing projects across 26 Indian states and neighboring countries.[reference:20]</p>
+          <a href="#" class="btn btn-sg"><i class="fas fa-arrow-right"></i> Learn More</a>
+        </div>
+        <div class="col-lg-7">
+          <div class="epc-step">
+            <div class="step-num">01</div>
+            <div>
+              <h5>Design & Engineering</h5>
+              <p>In-house engineering teams deliver optimized, cost-efficient solar plant designs covering feasibility analysis, system layout, and detailed engineering.[reference:21]</p>
+            </div>
+          </div>
+          <div class="epc-step">
+            <div class="step-num">02</div>
+            <div>
+              <h5>Procurement & Supply Chain</h5>
+              <p>Complete EPC procurement including modules, inverters, transformers, mounting structures, and monitoring systems through a strong domestic and global vendor network.[reference:22]</p>
+            </div>
+          </div>
+          <div class="epc-step">
+            <div class="step-num">03</div>
+            <div>
+              <h5>Construction & Commissioning</h5>
+              <p>Experienced execution teams handle site assessment, installation, interconnection, testing, and grid synchronization to ensure seamless project delivery.[reference:23]</p>
+            </div>
+          </div>
+          <div class="epc-step">
+            <div class="step-num">04</div>
+            <div>
+              <h5>Quality Assurance</h5>
+              <p>Rigorous quality checks, vendor evaluation, and performance testing ensure safe, reliable, and high-performing solar power plants.[reference:24]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENT LOGOS ===== -->
+  <section class="section-sg section-sg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Trusted By</span>
+        <h2>Our Satisfied Clients</h2>
+        <p class="mt-3 mx-auto" style="max-width: 600px;">Some of our great clients and their reviews — organizations that trust SunGarner for their energy needs.</p>
+      </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="client-logo-box">
+            <div>
+              <div class="logo-name" style="color:#c0392b;">Marvel Wires</div>
+              <div class="logo-sub">Rooftop Solar</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="client-logo-box">
+            <div>
+              <div class="logo-name" style="color:#2980b9;">Geeta Vatika</div>
+              <div class="logo-sub">Cancer Hospital</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="client-logo-box">
+            <div>
+              <div class="logo-name" style="color:#8e44ad;">Fabindia</div>
+              <div class="logo-sub">Since 1960</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="client-logo-box">
+            <div>
+              <div class="logo-name" style="color:#27ae60;">Modi Xerox</div>
+              <div class="logo-sub">5+ Years</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="client-logo-box">
+            <div>
+              <div class="logo-name" style="color:#e67e22;">V N Dyers</div>
+              <div class="logo-sub">Textiles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section-sg section-sg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Testimonials</span>
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card-sg">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>"We at Marvel Wires are pleased to say that selecting SunGarner Energies Ltd. as our EPC partner for the installation of a 170kWp rooftop solar power plant was an excellent decision. The quality of workmanship reflects their attention to detail and commitment to excellence."</p>
+            <div class="client-info">
+              <div class="client-avatar">MS</div>
+              <div>
+                <div class="client-name">Mr. M S. Negi</div>
+                <div class="client-role">Founder & CEO, Marvel Wires, India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card-sg">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>"The project was completed efficiently and has significantly reduced our energy costs. The reliability of the solar power system has been outstanding, ensuring uninterrupted power supply critical for our hospital operations. We highly recommend SunGarner Energies solar solution to other institutions."</p>
+            <div class="client-info">
+              <div class="client-avatar">US</div>
+              <div>
+                <div class="client-name">Mr. Umesh Singhaniya</div>
+                <div class="client-role">Secretary, Geeta Vatika-Poddar Cancer Hospital, Gorakhpur</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card-sg">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>"The SunGarner team did an exceptional job with the installation of our solar power plant at our farm house. Despite the challenges of the remote location, the installation process was smooth and efficient. We are already seeing the benefits in terms of reduced electricity costs and reliable power supply."</p>
+            <div class="client-info">
+              <div class="client-avatar">AK</div>
+              <div>
+                <div class="client-name">Mrs. Anita Thapar Kathpalia</div>
+                <div class="client-role">ATK Consultant, Former Chief of Marketing, Fabindia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="section-sg section-sg-white">
+    <div class="container">
+      <div class="cta-sg">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2 class="mb-3">Ready to Switch to Solar?</h2>
+            <p class="mb-0" style="font-size: 1.05rem;">Get a customized solar solution for your home, business, or institution. Our experts will help you calculate savings and design the perfect system.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+            <a href="#" class="btn btn-sg-accent"><i class="fas fa-phone"></i> Contact Us Today</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-sg">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="sg-logo sg-logo-light mb-4 d-inline-flex" href="#">
+            <div class="logo-mark"><i class="fas fa-sun"></i></div>
+            <div class="logo-text">SunGarner<small>Energies Ltd</small></div>
+          </a>
+          <p style="font-size: 0.9rem; max-width: 320px; margin-top: 1rem;">SunGarner Energies Ltd is a leading power products manufacturer and solar solution provider since 2015, offering Solar Power, UPS, Batteries, Inverters, and EV Products.[reference:25]</p>
+          <div class="footer-social mt-4">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Youtube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h5>Products</h5>
+          <a href="#">Solar Inverters</a>
+          <a href="#">Tall Tubular Batteries</a>
+          <a href="#">PV Modules</a>
+          <a href="#">E-Rickshaw Chargers</a>
+          <a href="#">Online UPS</a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h5>Company</h5>
+          <a href="#">About Us</a>
+          <a href="#">Why Choose Us</a>
+          <a href="#">Our Clients</a>
+          <a href="#">News & Events</a>
+          <a href="#">Careers</a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h5>Services</h5>
+          <a href="#">Solar EPC</a>
+          <a href="#">Design & Engineering</a>
+          <a href="#">Procurement</a>
+          <a href="#">Construction</a>
+          <a href="#">Quality Assurance</a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h5>Contact</h5>
+          <a href="#"><i class="fas fa-phone"></i> 1800 102 2748</a>
+          <a href="#"><i class="fas fa-envelope"></i> info@sungarner.com</a>
+          <a href="#"><i class="fas fa-globe"></i> www.sungarner.com</a>
+          <a href="#"><i class="fas fa-globe"></i> www.seltrik.com</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i> Greater Noida, India</a>
+        </div>
+      </div>
+      <div class="footer-bottom-sg d-flex flex-wrap justify-content-between align-items-center">
+        <p>&copy; 2026 SunGarner Energies Ltd | All rights reserved</p>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ===== Theme Toggle =====
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const icon = themeToggle.querySelector('i');
+
+    const savedTheme = localStorage.getItem('sungarner-theme') || 'light';
+    html.setAttribute('data-bs-theme', savedTheme);
+    updateIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-bs-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-bs-theme', next);
+      localStorage.setItem('sungarner-theme', next);
+      updateIcon(next);
+    });
+
+    function updateIcon(theme) {
+      icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    // ===== Navbar Scroll Effect =====
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      if (window.scrollY > 50) {
+        nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
+      } else {
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SunGarner Energies | Solar Energy Solutions</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        :root {
+            --green: #0b6b45;
+            --green-dark: #063c29;
+            --lime: #b7ef3a;
+            --dark: #081512;
+            --text: #50605a;
+            --light: #f4f8f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-family: "Manrope", sans-serif;
+            font-weight: 800;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1240px;
+        }
+
+        /* TOP BAR */
+
+        .topbar {
+            background: var(--dark);
+            color: #fff;
+            font-size: 13px;
+            padding: 9px 0;
+        }
+
+        .topbar a {
+            color: #fff;
+            opacity: .9;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(15px);
+            padding: 18px 0;
+            transition: .3s;
+        }
+
+        .navbar-brand {
+            font-size: 25px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .navbar-brand span {
+            color: var(--green);
+        }
+
+        .navbar-nav .nav-link {
+            color: #18251f;
+            font-weight: 600;
+            margin: 0 8px;
+            font-size: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--green);
+        }
+
+        .btn-main {
+            background: var(--green);
+            color: white;
+            border-radius: 50px;
+            padding: 13px 25px;
+            font-weight: 700;
+            border: none;
+        }
+
+        .btn-main:hover {
+            background: var(--green-dark);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            border: 1px solid rgba(255,255,255,.5);
+            color: white;
+            border-radius: 50px;
+            padding: 13px 25px;
+            font-weight: 700;
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 760px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3,27,19,.96) 0%,
+                    rgba(3,27,19,.78) 42%,
+                    rgba(3,27,19,.25) 100%
+                ),
+                url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=90")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 16px;
+            border-radius: 50px;
+            background: rgba(183,239,58,.12);
+            border: 1px solid rgba(183,239,58,.35);
+            color: var(--lime);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 6vw, 82px);
+            line-height: 1.02;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--lime);
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.82);
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* FLOAT CARD */
+
+        .hero-floating-card {
+            position: absolute;
+            right: 7%;
+            bottom: 70px;
+            background: rgba(255,255,255,.95);
+            border-radius: 20px;
+            padding: 20px;
+            width: 230px;
+            box-shadow: 0 25px 70px rgba(0,0,0,.25);
+        }
+
+        .hero-floating-card .icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: #e9f8df;
+            color: var(--green);
+            font-size: 23px;
+            margin-bottom: 14px;
+        }
+
+        .hero-floating-card h5 {
+            margin-bottom: 4px;
+        }
+
+        .hero-floating-card p {
+            margin: 0;
+            color: #718078;
+            font-size: 13px;
+        }
+
+        /* STATS */
+
+        .stats {
+            margin-top: -65px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stats-wrapper {
+            background: white;
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 20px 60px rgba(13,50,35,.12);
+        }
+
+        .stat-item {
+            text-align: center;
+            border-right: 1px solid #e4ebe7;
+        }
+
+        .stat-item:last-child {
+            border: none;
+        }
+
+        .stat-number {
+            font-size: 35px;
+            color: var(--green);
+            font-weight: 800;
+        }
+
+        .stat-title {
+            color: #67756f;
+            font-size: 14px;
+        }
+
+        /* SECTION */
+
+        .section {
+            padding: 110px 0;
+        }
+
+        .section-small-title {
+            text-transform: uppercase;
+            color: var(--green);
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-size: clamp(36px, 4vw, 55px);
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+        }
+
+        .section-text {
+            color: var(--text);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* SOLUTIONS */
+
+        .solutions {
+            background: var(--light);
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            height: 100%;
+            border: 1px solid #e7eee9;
+            transition: .35s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,0,0,.09);
+        }
+
+        .solution-icon {
+            width: 62px;
+            height: 62px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8f7df;
+            color: var(--green);
+            font-size: 27px;
+            margin-bottom: 25px;
+        }
+
+        .solution-card h4 {
+            margin-bottom: 13px;
+        }
+
+        .solution-card p {
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .solution-link {
+            color: var(--green);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* ABOUT */
+
+        .about-image {
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 570px;
+            object-fit: cover;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            background: white;
+            border-radius: 18px;
+            padding: 20px;
+            width: 210px;
+            box-shadow: 0 20px 40px rgba(0,0,0,.15);
+        }
+
+        .about-badge strong {
+            font-size: 35px;
+            color: var(--green);
+        }
+
+        /* FEATURE */
+
+        .feature-section {
+            background: var(--dark);
+            color: white;
+        }
+
+        .feature-section .section-text {
+            color: #aabbb3;
+        }
+
+        .feature-list {
+            margin-top: 35px;
+        }
+
+        .feature-list-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .feature-list-item i {
+            width: 32px;
+            height: 32px;
+            flex: 0 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--lime);
+            color: var(--dark);
+            border-radius: 50%;
+        }
+
+        .feature-image {
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+        }
+
+        /* PROJECTS */
+
+        .project-card {
+            border-radius: 22px;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            margin-bottom: 24px;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .project-overlay {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 25px;
+            color: white;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,.9)
+            );
+        }
+
+        .project-overlay span {
+            font-size: 13px;
+            color: var(--lime);
+            font-weight: 700;
+        }
+
+        /* PRODUCTS */
+
+        .product-card {
+            background: #f6f9f7;
+            border-radius: 24px;
+            padding: 25px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .product-card img {
+            height: 220px;
+            width: 100%;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product-card h4 {
+            font-size: 20px;
+        }
+
+        /* TESTIMONIAL */
+
+        .testimonial {
+            background: #f4f8f5;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            height: 100%;
+        }
+
+        .stars {
+            color: #f5b700;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card p {
+            color: #52615b;
+            line-height: 1.8;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 100px 0;
+        }
+
+        .cta-box {
+            border-radius: 35px;
+            padding: 70px;
+            color: white;
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(3,49,32,.96),
+                    rgba(11,107,69,.8)
+                ),
+                url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1800&q=80")
+                center/cover;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(35px,4vw,55px);
+        }
+
+        /* BLOG */
+
+        .blog-card {
+            border-radius: 22px;
+            overflow: hidden;
+            background: white;
+            border: 1px solid #e5ece8;
+            height: 100%;
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-content small {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .blog-content p {
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #06100d;
+            color: #9caaa4;
+            padding: 80px 0 25px;
+        }
+
+        footer h5 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer li {
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: #9caaa4;
+        }
+
+        footer a:hover {
+            color: var(--lime);
+        }
+
+        .footer-brand {
+            color: white;
+            font-size: 27px;
+            font-weight: 800;
+        }
+
+        .footer-brand span {
+            color: var(--lime);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.08);
+            margin-top: 50px;
+            padding-top: 25px;
+            font-size: 13px;
+        }
+
+        @media(max-width:991px) {
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero-floating-card {
+                display: none;
+            }
+
+            .stat-item {
+                border: none;
+                margin-bottom: 25px;
+            }
+
+            .navbar-nav {
+                padding: 20px 0;
+            }
+
+        }
+
+        @media(max-width:767px) {
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .about-image img,
+            .feature-image img {
+                height: 400px;
+            }
+
+            .cta-box {
+                padding: 40px 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+
+            <div>
+                <i class="bi bi-envelope me-2"></i>
+                info@sungarner.com
+            </div>
+
+            <div>
+                <i class="bi bi-telephone me-2"></i>
+                +91 97175 58008
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            Sun<span>Garner</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
+
+                        Products
+
+                    </a>
+
+                    <ul class="dropdown-menu border-0 shadow">
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Solar Inverters
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                PV Modules
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                BESS
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Solar Batteries
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#solutions">
+                        Solutions
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">
+                        Insights
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <a href="#contact" class="btn btn-main">
+                Get a Quote
+                <i class="bi bi-arrow-up-right ms-2"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i class="bi bi-sun"></i>
+                Clean Energy. Smarter Future.
+            </div>
+
+            <h1>
+                Powering a
+                <span>Greener</span>
+                Tomorrow.
+            </h1>
+
+            <p>
+                Advanced solar energy solutions for industries,
+                businesses and communities. From solar EPC to
+                energy storage, we build reliable clean-energy
+                infrastructure for a sustainable future.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#solutions" class="btn btn-main">
+                    Explore Solutions
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+                <a href="#projects" class="btn btn-outline-custom">
+                    View Projects
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-floating-card">
+
+        <div class="icon">
+            <i class="bi bi-lightning-charge"></i>
+        </div>
+
+        <h5>Clean Energy</h5>
+
+        <p>
+            Reliable and efficient power solutions
+            for a sustainable tomorrow.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-wrapper">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-title">
+                            Solar Projects
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">26</div>
+                        <div class="stat-title">
+                            States Covered
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">7+</div>
+                        <div class="stat-title">
+                            Countries
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-title">
+                            Years Experience
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOLUTIONS -->
+
+<section class="section solutions" id="solutions">
+
+    <div class="container">
+
+        <div class="row align-items-end mb-5">
+
+            <div class="col-lg-7">
+
+                <div class="section-small-title">
+                    What We Do
+                </div>
+
+                <h2 class="section-title">
+                    Complete Energy
+                    Solutions Under One Roof.
+                </h2>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <p class="section-text">
+                    From energy generation to storage and
+                    management, we provide integrated solutions
+                    designed around your energy requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- CARD -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-icon">
+                        <i class="bi bi-sun"></i>
+                    </div>
+
+                    <h4>Solar EPC</h4>
+
+                    <p>
+                        End-to-end engineering, procurement and
+                        construction solutions for commercial,
+                        industrial and utility-scale solar projects.
+                    </p>
+
+                    <a href="#" class="solution-link">
+                        Explore Solution →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-icon">
+                        <i class="bi bi-lightning"></i>
+                    </div>
+
+                    <h4>Solar Inverters</h4>
+
+                    <p>
+                        High-performance solar inverter solutions
+                        designed for efficient and reliable power
+                        conversion.
+                    </p>
+
+                    <a href="#" class="solution-link">
+                        Explore Products →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-icon">
+                        <i class="bi bi-grid-3x3-gap"></i>
+                    </div>
+
+                    <h4>PV Modules</h4>
+
+                    <p>
+                        Quality photovoltaic modules engineered
+                        for dependable solar power generation.
+                    </p>
+
+                    <a href="#" class="solution-link">
+                        View Modules →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-icon">
+                        <i class="bi bi-battery-charging"></i>
+                    </div>
+
+                    <h4>BESS</h4>
+
+                    <p>
+                        Battery Energy Storage Systems that help
+                        businesses manage energy demand and
+                        improve power reliability.
+                    </p>
+
+                    <a href="#" class="solution-link">
+                        Explore BESS →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-icon">
+                        <i class="bi bi-house-check"></i>
+                    </div>
+
+                    <h4>Rooftop Solar</h4>
+
+                    <p>
+                        Customized rooftop solar systems for
+                        businesses and institutions looking to
+                        reduce conventional energy dependence.
+                    </p>
+
+                    <a href="#" class="solution-link">
+                        Discover More →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-icon">
+                        <i class="bi bi-tools"></i>
+                    </div>
+
+                    <h4>O&M Services</h4>
+
+                    <p>
+                        Professional operation and maintenance
+                        services designed to keep solar assets
+                        performing efficiently.
+                    </p>
+
+                    <a href="#" class="solution-link">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="about-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Solar Energy">
+
+                    <div class="about-badge">
+
+                        <strong>10+</strong>
+
+                        <div>
+                            Years of clean-energy
+                            experience
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="section-small-title">
+                    About SunGarner
+                </div>
+
+                <h2 class="section-title mb-4">
+                    Building India's
+                    Clean Energy Future.
+                </h2>
+
+                <p class="section-text mb-4">
+
+                    SunGarner Energies is a power products
+                    manufacturer and solar solution provider
+                    offering products and services across
+                    the renewable-energy ecosystem.
+
+                </p>
+
+                <p class="section-text">
+
+                    Our capabilities cover solar power,
+                    energy storage, solar inverters,
+                    PV modules and turnkey EPC solutions.
+
+                </p>
+
+                <a href="#" class="btn btn-main mt-3">
+                    Know More
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURE -->
+
+<section class="section feature-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="section-small-title">
+                    Why Choose Us
+                </div>
+
+                <h2 class="section-title mb-4">
+                    Technology,
+                    Experience &
+                    Reliability.
+                </h2>
+
+                <p class="section-text">
+                    We combine engineering expertise,
+                    manufacturing capabilities and
+                    technology-driven solutions to deliver
+                    dependable energy infrastructure.
+                </p>
+
+
+                <div class="feature-list">
+
+                    <div class="feature-list-item">
+
+                        <i class="bi bi-check-lg"></i>
+
+                        <div>
+                            <strong>In-House R&D</strong>
+                            <br>
+                            <span class="text-secondary">
+                                Continuous innovation and
+                                technology development.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-list-item">
+
+                        <i class="bi bi-check-lg"></i>
+
+                        <div>
+                            <strong>End-to-End Solutions</strong>
+                            <br>
+                            <span class="text-secondary">
+                                From engineering to commissioning
+                                and support.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-list-item">
+
+                        <i class="bi bi-check-lg"></i>
+
+                        <div>
+                            <strong>Customer Focus</strong>
+                            <br>
+                            <span class="text-secondary">
+                                Solutions designed around
+                                real energy requirements.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="feature-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1200&q=85"
+                        alt="Solar Farm">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="section" id="projects">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-small-title">
+                Our Projects
+            </div>
+
+            <h2 class="section-title">
+                Powering Projects
+                Across India.
+            </h2>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-lg-7">
+
+                <div class="project-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85">
+
+                    <div class="project-overlay">
+
+                        <span>UTILITY SCALE</span>
+
+                        <h3>
+                            10.9 MWp Solar Project
+                        </h3>
+
+                        <p class="mb-0">
+                            UPNEDA
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <div class="project-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1000&q=85">
+
+                    <div class="project-overlay">
+
+                        <span>ENERGY STORAGE</span>
+
+                        <h3>
+                            6 MWh BESS
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="project-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=85">
+
+                    <div class="project-overlay">
+
+                        <span>ROOFTOP</span>
+
+                        <h3>
+                            Commercial Solar
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-8">
+
+                <div class="project-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1200&q=85">
+
+                    <div class="project-overlay">
+
+                        <span>INDUSTRIAL</span>
+
+                        <h3>
+                            Industrial Solar Power Plant
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="section solutions">
+
+    <div class="container">
+
+        <div class="row align-items-end mb-5">
+
+            <div class="col-lg-7">
+
+                <div class="section-small-title">
+                    Our Products
+                </div>
+
+                <h2 class="section-title">
+                    Built for Performance.
+                </h2>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <p class="section-text">
+                    Explore our range of energy products
+                    designed for modern power requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=700&q=80">
+
+                    <h4>Solar Inverters</h4>
+
+                    <p class="text-secondary">
+                        Advanced power conversion technology.
+                    </p>
+
+                    <a href="#" class="solution-link">
+                        View Products →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80">
+
+                    <h4>PV Modules</h4>
+
+                    <p class="text-secondary">
+                        Reliable solar photovoltaic solutions.
+                    </p>
+
+                    <a href="#" class="solution-link">
+                        View Products →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?auto=format&fit=crop&w=700&q=80">
+
+                    <h4>Energy Storage</h4>
+
+                    <p class="text-secondary">
+                        Smarter battery storage solutions.
+                    </p>
+
+                    <a href="#" class="solution-link">
+                        View Products →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TESTIMONIAL -->
+
+<section class="section testimonial">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-small-title">
+                Client Stories
+            </div>
+
+            <h2 class="section-title">
+                Trusted by Businesses.
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="testimonial-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        SunGarner delivered our rooftop solar
+                        project efficiently and provided strong
+                        ongoing support.
+                    </p>
+
+                    <strong>
+                        M. S. Negi
+                    </strong>
+
+                    <small class="d-block text-secondary">
+                        Marvel Wires
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="testimonial-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        The solar power installation helped us
+                        reduce energy costs while providing
+                        reliable power for our operations.
+                    </p>
+
+                    <strong>
+                        Umesh Singhaniya
+                    </strong>
+
+                    <small class="d-block text-secondary">
+                        Geeta Vatika
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="testimonial-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Their engineering team provided a
+                        customized solution with excellent
+                        technical support.
+                    </p>
+
+                    <strong>
+                        Vinod Ajitsaria
+                    </strong>
+
+                    <small class="d-block text-secondary">
+                        V N Dyers & Textiles
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2>
+                        Ready to Switch
+                        to Clean Energy?
+                    </h2>
+
+                    <p class="mt-3 mb-0 opacity-75">
+                        Let's design a smarter energy solution
+                        for your business.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                    <a href="#" class="btn btn-light rounded-pill px-4 py-3 fw-bold">
+                        Talk to an Expert
+                        <i class="bi bi-arrow-up-right ms-2"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BLOG -->
+
+<section class="section" id="blog">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-small-title">
+                Latest Insights
+            </div>
+
+            <h2 class="section-title">
+                Energy & Solar Insights
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="blog-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80">
+
+                    <div class="blog-content">
+
+                        <small>
+                            SOLAR ENERGY
+                        </small>
+
+                        <h4 class="mt-2">
+                            Industrial Solar Systems
+                            for Modern Businesses
+                        </h4>
+
+                        <p>
+                            Understanding how businesses can
+                            integrate solar and energy storage
+                            into their power strategy.
+                        </p>
+
+                        <a href="#" class="solution-link">
+                            Read Article →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="blog-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80">
+
+                    <div class="blog-content">
+
+                        <small>
+                            ENERGY STORAGE
+                        </small>
+
+                        <h4 class="mt-2">
+                            Understanding Battery
+                            Energy Storage Systems
+                        </h4>
+
+                        <p>
+                            How BESS can support modern
+                            commercial and industrial energy needs.
+                        </p>
+
+                        <a href="#" class="solution-link">
+                            Read Article →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="blog-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80">
+
+                    <div class="blog-content">
+
+                        <small>
+                            CLEAN ENERGY
+                        </small>
+
+                        <h4 class="mt-2">
+                            The Future of Renewable
+                            Energy in India
+                        </h4>
+
+                        <p>
+                            Exploring the changing landscape
+                            of India's clean energy ecosystem.
+                        </p>
+
+                        <a href="#" class="solution-link">
+                            Read Article →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-4">
+
+                <div class="footer-brand">
+                    Sun<span>Garner</span>
+                </div>
+
+                <p class="mt-3">
+                    Delivering reliable, efficient and
+                    technology-driven clean energy solutions
+                    for a sustainable future.
+                </p>
+
+                <div class="d-flex gap-2 mt-4">
+
+                    <a href="#" class="btn btn-outline-light rounded-circle">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="btn btn-outline-light rounded-circle">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="#" class="btn btn-outline-light rounded-circle">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>Company</h5>
+
+                <ul>
+
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Careers</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-4">
+
+                <h5>Solutions</h5>
+
+                <ul>
+
+                    <li>
+                        <a href="#">Solar EPC</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Rooftop Solar</a>
+                    </li>
+
+                    <li>
+                        <a href="#">BESS</a>
+                    </li>
+
+                    <li>
+                        <a href="#">O&M</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-4">
+
+                <h5>Contact</h5>
+
+                <ul>
+
+                    <li>
+                        Greater Noida, U.P. 201306
+                    </li>
+
+                    <li>
+                        +91 97175 58008
+                    </li>
+
+                    <li>
+                        info@sungarner.com
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright text-center">
+
+            © 2026 SunGarner Energies Ltd.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

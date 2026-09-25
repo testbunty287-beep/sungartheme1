@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaada & SunGarner - Powering a Sustainable Future</title>
+  <meta name="description" content="Avaada delivers 7.3 GWp of renewable energy. SunGarner manufactures solar inverters, UPS, batteries, and EPC services.">
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --avaada-primary: #060097;
+      --avaada-secondary: #c10fff;
+      --avaada-dark: #1e293b;
+      --avaada-body: #67768e;
+      --avaada-light: #f9f6fe;
+      --avaada-white: #ffffff;
+      --avaada-gray: #F2F5F7;
+      --avaada-yellow: #ffcd57;
+      --avaada-green: #A7DF5D;
+      --avaada-blue: #284798;
+      --sungarner-primary: #1a5c2a;
+      --sungarner-accent: #f5a623;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--avaada-body);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      color: var(--avaada-dark);
+    }
+
+    h1 { font-size: 3.55rem; }
+    h2 { font-size: 2.66rem; }
+    h3 { font-size: 1.33rem; }
+    h4 { font-size: 1.11rem; }
+    h5 { font-size: 1rem; }
+    h6 { font-size: 0.83rem; }
+
+    a { text-decoration: none; }
+    a:hover { color: var(--avaada-secondary); }
+
+    .btn-avaada {
+      background-color: var(--avaada-yellow);
+      color: var(--avaada-dark);
+      font-weight: 600;
+      font-size: 1.11rem;
+      padding: 1.25rem 2.5rem;
+      border-radius: 50px;
+      border: none;
+      transition: all 0.3s ease;
+      line-height: 1;
+    }
+    .btn-avaada:hover {
+      background-color: #e6b94e;
+      color: var(--avaada-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 205, 87, 0.4);
+    }
+    .btn-avaada-outline {
+      background: transparent;
+      border: 2px solid var(--avaada-yellow);
+      color: var(--avaada-yellow);
+      font-weight: 600;
+      font-size: 1.11rem;
+      padding: 1.25rem 2.5rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      line-height: 1;
+    }
+    .btn-avaada-outline:hover {
+      background-color: var(--avaada-yellow);
+      color: var(--avaada-dark);
+    }
+    .btn-sungarner {
+      background-color: var(--sungarner-primary);
+      color: #fff;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .btn-sungarner:hover {
+      background-color: #134a20;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(26, 92, 42, 0.3);
+    }
+
+    /* Header / Navbar */
+    .navbar-avaada {
+      background-color: var(--avaada-primary);
+      padding: 1rem 0;
+      transition: all 0.3s;
+    }
+    .navbar-avaada .navbar-brand img { height: 57px; }
+    .navbar-avaada .nav-link {
+      color: rgba(242,245,247,0.76) !important;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 0.85rem !important;
+      transition: color 0.2s;
+    }
+    .navbar-avaada .nav-link:hover,
+    .navbar-avaada .nav-link.active {
+      color: #ffffff !important;
+    }
+    .navbar-avaada .dropdown-menu {
+      border-top: 2px solid var(--avaada-primary);
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      padding: 1.5rem;
+      min-width: 280px;
+    }
+    .navbar-avaada .dropdown-item {
+      font-size: 0.9rem;
+      padding: 0.4rem 0;
+      color: var(--avaada-dark);
+    }
+    .navbar-avaada .dropdown-item:hover {
+      background: transparent;
+      color: var(--avaada-primary);
+      padding-left: 4px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      min-height: 92vh;
+      background: linear-gradient(135deg, #0a0a3a 0%, #060097 40%, #1a1a6e 100%);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://www.avaada.com/wp-content/uploads/Solar-Plant.webp') center/cover no-repeat;
+      opacity: 0.25;
+      animation: heroZoom 20s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.08); }
+    }
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-section h1 {
+      color: #ffffff;
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .hero-section h4 {
+      color: rgba(255,255,255,0.85);
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      max-width: 700px;
+    }
+    .hero-section .badge-tag {
+      display: inline-block;
+      background: rgba(167, 223, 93, 0.15);
+      border: 1px solid rgba(167, 223, 93, 0.4);
+      color: var(--avaada-green);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    /* About Section */
+    .section-about {
+      padding: 100px 0;
+      background: var(--avaada-white);
+    }
+    .section-about .leaf-icon {
+      position: absolute;
+      width: 70px;
+      top: -30px;
+      left: 20px;
+      opacity: 0.6;
+    }
+    .about-img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .about-img-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+    .about-img-grid img:first-child {
+      grid-row: span 2;
+      height: 456px;
+    }
+
+    /* Stats Section */
+    .section-stats {
+      background: var(--avaada-light);
+      padding: 80px 0;
+    }
+    .stat-card {
+      background: var(--avaada-white);
+      border-radius: 20px;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .stat-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(6, 0, 151, 0.1);
+    }
+    .stat-card .stat-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--avaada-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      color: #fff;
+      font-size: 2rem;
+    }
+    .stat-card .stat-number {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--avaada-dark);
+      line-height: 1;
+    }
+    .stat-card .stat-label {
+      font-size: 1rem;
+      color: var(--avaada-body);
+      margin-top: 0.5rem;
+    }
+
+    /* Solutions Section */
+    .section-solutions {
+      padding: 100px 0;
+      background: var(--avaada-white);
+    }
+    .solution-icon-box {
+      background: var(--avaada-light);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 2px solid transparent;
+    }
+    .solution-icon-box:hover {
+      border-color: var(--avaada-green);
+      background: #f0fdf4;
+      transform: translateY(-5px);
+    }
+    .solution-icon-box .sol-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: var(--avaada-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: #fff;
+      font-size: 1.75rem;
+    }
+    .solution-icon-box h5 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .solution-icon-box p {
+      font-size: 0.9rem;
+      color: var(--avaada-body);
+      margin-bottom: 0;
+    }
+
+    /* SDG Carousel */
+    .section-sdg {
+      padding: 80px 0;
+      background: var(--avaada-light);
+    }
+    .sdg-card {
+      background: var(--avaada-white);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      height: 100%;
+      transition: all 0.3s;
+      border: 1px solid #e8e8f0;
+    }
+    .sdg-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    }
+    .sdg-card .sdg-number {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--avaada-primary);
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    .sdg-card .sdg-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--avaada-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+    .sdg-card h6 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .sdg-card p {
+      font-size: 0.85rem;
+      color: var(--avaada-body);
+      margin-bottom: 0;
+    }
+
+    /* Events Carousel */
+    .section-events {
+      padding: 80px 0;
+      background: var(--avaada-white);
+    }
+    .event-card {
+      background: var(--avaada-light);
+      border-radius: 24px 0 24px 0;
+      overflow: hidden;
+      transition: all 0.3s;
+      height: 100%;
+      border: 1px solid transparent;
+    }
+    .event-card:hover {
+      background: #f0fdf4;
+      border-color: var(--avaada-green);
+      transform: translateY(-5px);
+    }
+    .event-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .event-card .event-body {
+      padding: 1.5rem;
+    }
+    .event-card .event-location {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--avaada-primary);
+      margin-bottom: 0.5rem;
+    }
+    .event-card h5 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+
+    /* Partner Section */
+    .section-partner {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #f8f6ff 0%, #f0fdf4 100%);
+    }
+    .partner-icon-box {
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: 16px;
+      transition: all 0.3s;
+    }
+    .partner-icon-box:hover {
+      background: var(--avaada-white);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+    .partner-icon-box .p-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: var(--avaada-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.75rem;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+    .partner-icon-box h6 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    /* Map / Projects Section */
+    .section-projects {
+      padding: 100px 0;
+      background: var(--avaada-white);
+    }
+    .projects-map-wrap {
+      position: relative;
+      text-align: center;
+    }
+    .projects-map-wrap img {
+      max-width: 100%;
+      height: auto;
+    }
+    .state-legend-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 0.5rem 0;
+    }
+    .state-legend-item .color-bar {
+      width: 6px;
+      height: 40px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .state-legend-item h6 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+    .state-legend-item p {
+      font-size: 0.82rem;
+      color: var(--avaada-body);
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+
+    /* Life at Avaada */
+    .section-life {
+      padding: 100px 0;
+      background: var(--avaada-light);
+    }
+    .life-card {
+      background: var(--avaada-white);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      height: 100%;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+    .life-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.07);
+    }
+    .life-card .life-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--avaada-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      color: #fff;
+      font-size: 2rem;
+    }
+    .life-card h5 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .life-card p {
+      font-size: 0.9rem;
+      color: var(--avaada-body);
+      margin-bottom: 0;
+    }
+
+    /* News / Blog Section */
+    .section-news {
+      padding: 80px 0;
+      background: var(--avaada-white);
+    }
+    .news-tabs .nav-link {
+      color: var(--avaada-body);
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+    .news-tabs .nav-link.active {
+      background: var(--avaada-primary);
+      color: #fff;
+    }
+    .news-tabs .nav-link:hover:not(.active) {
+      background: var(--avaada-light);
+      color: var(--avaada-primary);
+    }
+    .news-card {
+      background: var(--avaada-white);
+      border: 1px solid #e8e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+      height: 100%;
+    }
+    .news-card:hover {
+      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+      transform: translateY(-4px);
+    }
+    .news-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .news-card .news-body {
+      padding: 1.25rem;
+    }
+    .news-card .news-meta {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--avaada-green);
+      margin-bottom: 0.5rem;
+    }
+    .news-card h6 {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 0.75rem;
+    }
+    .news-card .read-more {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--avaada-primary);
+      border-bottom: 2px solid var(--avaada-primary);
+      padding-bottom: 2px;
+    }
+
+    /* SunGarner Sections */
+    .section-sungarner-about {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #f0fdf4 0%, #f8f6ff 100%);
+    }
+    .section-sungarner-about .about-text {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .sungarner-stat {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .sungarner-stat .num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--sungarner-primary);
+    }
+    .sungarner-stat .label {
+      font-size: 0.9rem;
+      color: var(--avaada-body);
+    }
+
+    .section-sungarner-products {
+      padding: 100px 0;
+      background: var(--avaada-white);
+    }
+    .product-card {
+      background: var(--avaada-light);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      height: 100%;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    .product-card:hover {
+      border-color: var(--sungarner-primary);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(26, 92, 42, 0.1);
+    }
+    .product-card .prod-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 16px;
+      background: var(--sungarner-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: #fff;
+      font-size: 1.75rem;
+    }
+    .product-card h5 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .product-card p {
+      font-size: 0.88rem;
+      color: var(--avaada-body);
+      margin-bottom: 0;
+    }
+
+    .section-sungarner-clients {
+      padding: 80px 0;
+      background: var(--avaada-light);
+    }
+    .testimonial-card {
+      background: var(--avaada-white);
+      border-radius: 20px;
+      padding: 2rem;
+      height: 100%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      border-left: 4px solid var(--sungarner-primary);
+    }
+    .testimonial-card .quote-icon {
+      font-size: 1.5rem;
+      color: var(--sungarner-primary);
+      margin-bottom: 1rem;
+    }
+    .testimonial-card p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-style: italic;
+      color: var(--avaada-body);
+    }
+    .testimonial-card .client-name {
+      font-weight: 700;
+      color: var(--avaada-dark);
+      font-style: normal;
+      font-size: 0.9rem;
+    }
+    .testimonial-card .client-role {
+      font-size: 0.82rem;
+      color: var(--avaada-body);
+    }
+
+    /* Footer */
+    .footer-avaada {
+      background: var(--avaada-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 80px 0 0;
+    }
+    .footer-avaada h5 {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .footer-avaada a {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      display: block;
+      padding: 0.25rem 0;
+    }
+    .footer-avaada a:hover {
+      color: var(--avaada-green);
+    }
+    .footer-social a {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    .footer-social a:hover {
+      background: var(--avaada-green);
+      color: var(--avaada-dark);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+    }
+    .footer-bottom p {
+      font-size: 0.85rem;
+      margin-bottom: 0;
+    }
+    .footer-bottom a {
+      display: inline;
+      padding: 0 0.75rem;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+    .footer-bottom a:last-child { border-right: none; }
+
+    /* Theme toggle */
+    .theme-toggle {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .theme-toggle:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
+      .hero-section h1 { font-size: 2.2rem; }
+      .hero-section h4 { font-size: 1.05rem; }
+      .section-about, .section-solutions, .section-partner,
+      .section-projects, .section-life, .section-sungarner-about,
+      .section-sungarner-products { padding: 60px 0; }
+      .stat-card .stat-number { font-size: 2rem; }
+      .about-img-grid img:first-child { height: 300px; }
+      .about-img-grid img { height: 142px; }
+    }
+    @media (max-width: 575.98px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.5rem; }
+      .hero-section h1 { font-size: 1.8rem; }
+      .btn-avaada, .btn-avaada-outline {
+        padding: 1rem 1.75rem;
+        font-size: 0.95rem;
+      }
+      .stat-card { padding: 1.5rem 1rem; }
+      .stat-card .stat-number { font-size: 1.8rem; }
+    }
+
+    /* Dark theme overrides */
+    [data-bs-theme="dark"] body {
+      background: #0f172a;
+      color: #94a3b8;
+    }
+    [data-bs-theme="dark"] h1, [data-bs-theme="dark"] h2,
+    [data-bs-theme="dark"] h3, [data-bs-theme="dark"] h4,
+    [data-bs-theme="dark"] h5, [data-bs-theme="dark"] h6 {
+      color: #f1f5f9;
+    }
+    [data-bs-theme="dark"] .section-about,
+    [data-bs-theme="dark"] .section-solutions,
+    [data-bs-theme="dark"] .section-events,
+    [data-bs-theme="dark"] .section-projects,
+    [data-bs-theme="dark"] .section-news,
+    [data-bs-theme="dark"] .section-sungarner-products {
+      background: #0f172a;
+    }
+    [data-bs-theme="dark"] .section-stats,
+    [data-bs-theme="dark"] .section-sdg,
+    [data-bs-theme="dark"] .section-life,
+    [data-bs-theme="dark"] .section-sungarner-clients {
+      background: #1e293b;
+    }
+    [data-bs-theme="dark"] .section-sungarner-about {
+      background: linear-gradient(135deg, #0f172a 0%, #1a2e1a 100%);
+    }
+    [data-bs-theme="dark"] .stat-card,
+    [data-bs-theme="dark"] .solution-icon-box,
+    [data-bs-theme="dark"] .sdg-card,
+    [data-bs-theme="dark"] .life-card,
+    [data-bs-theme="dark"] .news-card,
+    [data-bs-theme="dark"] .product-card,
+    [data-bs-theme="dark"] .testimonial-card {
+      background: #1e293b;
+      border-color: #334155;
+    }
+    [data-bs-theme="dark"] .event-card {
+      background: #1e293b;
+    }
+    [data-bs-theme="dark"] .event-card:hover {
+      background: #1a2e1a;
+    }
+    [data-bs-theme="dark"] .navbar-avaada {
+      background: #0a0a3a;
+    }
+    [data-bs-theme="dark"] .footer-avaada {
+      background: #020617;
+    }
+    [data-bs-theme="dark"] .section-partner {
+      background: linear-gradient(135deg, #0f172a 0%, #1a2e1a 100%);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-avaada sticky-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://www.avaada.com/wp-content/uploads/White-Logo.png.webp" alt="Avaada" height="57">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavContent">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavContent">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">About AVAADA</a></li>
+              <li><a class="dropdown-item" href="#">Group Leadership</a></li>
+              <li><a class="dropdown-item" href="#">Our Journey</a></li>
+              <li><a class="dropdown-item" href="#">Awards & Accolades</a></li>
+              <li><a class="dropdown-item" href="#">ISO Accreditations</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Business</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Renewable Energy</a></li>
+              <li><a class="dropdown-item" href="#">Solar PV Manufacturing</a></li>
+              <li><a class="dropdown-item" href="#">Green Fuels</a></li>
+              <li><a class="dropdown-item" href="#">Energy Storage Solutions</a></li>
+              <li><a class="dropdown-item" href="#">Green Data Center</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sustainability & CSR</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Sustainability @AVAADA</a></li>
+              <li><a class="dropdown-item" href="#">CSR</a></li>
+              <li><a class="dropdown-item" href="#">Sustainability Reports</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Newsroom</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">In the News</a></li>
+              <li><a class="dropdown-item" href="#">Press Release</a></li>
+              <li><a class="dropdown-item" href="#">Media Kit</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Blogs</a></li>
+              <li><a class="dropdown-item" href="#">Thought Leadership</a></li>
+              <li><a class="dropdown-item" href="#">Newsletter</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item ms-2">
+            <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <span class="badge-tag">Always Clean, Always On</span>
+          <h1>Powering the Intelligence of Tomorrow</h1>
+          <h4>As the world grows smarter, its energy must grow cleaner. Avaada unites Solar, Wind, Hydro and Storage into a seamless source of Round the Clock Clean Energy.</h4>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#" class="btn btn-avaada">Choose Your Right Solar Solution</a>
+            <a href="#" class="btn btn-avaada-outline">Power Your Career, Join Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section-about position-relative">
+    <div class="container position-relative">
+      <img src="https://www.avaada.com/wp-content/uploads/leaf-1.png.webp" alt="" class="leaf-icon d-none d-lg-block">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="about-img-grid">
+            <img src="https://www.avaada.com/wp-content/uploads/SOlar-Home.jpg.webp" alt="Solar">
+            <img src="https://www.avaada.com/wp-content/uploads/Wind-Hom.jpg.webp" alt="Wind">
+            <img src="https://www.avaada.com/wp-content/uploads/About-Us-3.jpg.webp" alt="Avaada">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="mb-3">About Us</h2>
+          <h3 class="mb-4" style="font-weight: 600; color: var(--avaada-dark);">Unlocking Nature's Potential for a Sustainable Tomorrow</h3>
+          <p class="mb-4" style="font-size: 1rem; line-height: 1.8;">Indian culture has always revered the 'Panchtatvas' which include wind, water, earth, fire, and the sky. We firmly believe in nature's abundant potential and its paramount role in sustenance of life forms on the planet. Deriving our inspiration from forces of nature, Avaada's business channelises these sources for powering human development.</p>
+          <a href="#" class="btn btn-avaada">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUN GARNER ABOUT SECTION ===== -->
+  <section class="section-sungarner-about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h5 class="text-uppercase fw-bold mb-2" style="color: var(--sungarner-primary); letter-spacing: 2px;">About SunGarner</h5>
+          <h2 class="mb-4">Leading Power Products Manufacturer & Solar Solution Provider</h2>
+          <p class="about-text mb-4">SunGarner Energies Ltd is the leading power products manufacturer and solar solution provider since 2015. In 2017, SunGarner established its first solar inverter manufacturing unit at Greater Noida, India, subsequently diversifying into energy storage and solar panels.[reference:0]</p>
+          <p class="about-text mb-4">SunGarner has executed more than 100 large solar grid-tied projects ranging from 50kWp to 2MWP in India and abroad. Their inverters have been supplied in 26 states of India from Leh to Tamil Nadu in a span of 6 years, and they are exporting to 7 countries internationally.[reference:1]</p>
+          <p class="about-text mb-4">SunGarner caters to engineering projects and products for clients in India and overseas, focusing on reliable, efficient, and lowest cost energy solutions. Their services include design, engineering, and implementation of solar Off Grid and On Grid Power Plants.[reference:2]</p>
+          <div class="row g-3 mt-4">
+            <div class="col-4">
+              <div class="sungarner-stat">
+                <div class="num">100+</div>
+                <div class="label">Large Projects</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="sungarner-stat">
+                <div class="num">26</div>
+                <div class="label">States Supplied</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="sungarner-stat">
+                <div class="num">7</div>
+                <div class="label">Countries Exported</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-6">
+              <img src="https://www.avaada.com/wp-content/uploads/Solarpanel-Manufacturing.jpg.webp" alt="SunGarner Manufacturing" class="img-fluid rounded-4" style="height: 250px; object-fit: cover; width: 100%;">
+            </div>
+            <div class="col-6">
+              <img src="https://www.avaada.com/wp-content/uploads/Pavagada-II-scaled-1.jpg.webp" alt="Solar Project" class="img-fluid rounded-4" style="height: 250px; object-fit: cover; width: 100%;">
+            </div>
+            <div class="col-12">
+              <img src="https://www.avaada.com/wp-content/uploads/Green-Hydrogen.jpg.webp" alt="Green Energy" class="img-fluid rounded-4" style="height: 200px; object-fit: cover; width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS SECTION ===== -->
+  <section class="section-stats">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-solar-panel"></i></div>
+            <div class="stat-number" data-count="221">0</div>
+            <div class="stat-label">Projects</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+            <div class="stat-number" data-count="7.3" data-decimal="1">0</div>
+            <div class="stat-label">Installed Capacity (GWp)</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-cloud"></i></div>
+            <div class="stat-number" data-count="32.8" data-decimal="1">0</div>
+            <div class="stat-label">CO₂ Mitigation (MMT)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTIONS SECTION ===== -->
+  <section class="section-solutions">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h5 class="text-uppercase fw-bold mb-2" style="color: var(--avaada-primary); letter-spacing: 2px;">Sustainable Solutions for a Greener Future</h5>
+        <h2 class="mx-auto" style="max-width: 800px;">Illuminating the planet using energy derived from sources that naturally replenish over time</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="solution-icon-box">
+            <div class="sol-icon"><i class="fas fa-leaf"></i></div>
+            <h5>Renewable Energy</h5>
+            <p>Integrated solar, wind, and hydro solutions for a cleaner future.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="solution-icon-box">
+            <div class="sol-icon"><i class="fas fa-industry"></i></div>
+            <h5>Solar PV Manufacturing</h5>
+            <p>High-efficiency solar modules with advanced technology.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="solution-icon-box">
+            <div class="sol-icon"><i class="fas fa-flask"></i></div>
+            <h5>Green Fuels</h5>
+            <p>Green hydrogen, ammonia, and sustainable fuel solutions.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="solution-icon-box">
+            <div class="sol-icon"><i class="fas fa-battery-full"></i></div>
+            <h5>Energy Storage Solutions</h5>
+            <p>Advanced battery and pumped hydro storage systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUN GARNER PRODUCTS SECTION ===== -->
+  <section class="section-sungarner-products">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h5 class="text-uppercase fw-bold mb-2" style="color: var(--sungarner-primary); letter-spacing: 2px;">SunGarner Products</h5>
+        <h2>Reliable, Efficient & Cost-Effective Energy Solutions</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="prod-icon"><i class="fas fa-bolt"></i></div>
+            <h5>Solar Inverters</h5>
+            <p>15-100 KVA MPPT, DSP-based technology with built-in isolation transformer and up to 60% energy savings.[reference:3]</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="prod-icon"><i class="fas fa-car-battery"></i></div>
+            <h5>Tall Tubular Batteries</h5>
+            <p>9 models ranging from 120Ah to 200Ah C20, designed for reliable inverter backup power.[reference:4]</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="prod-icon"><i class="fas fa-solar-panel"></i></div>
+            <h5>PV Modules</h5>
+            <p>200-325 Watt polycrystalline solar modules with 72-cell configuration for on-grid and rooftop applications.[reference:5]</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="prod-icon"><i class="fas fa-charging-station"></i></div>
+            <h5>E-Rickshaw Chargers</h5>
+            <p>“Vault” series chargers with 48V/12A, 48V/15A, and 48V/20A configurations for EV charging.[reference:6]</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-sungarner">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUN GARNER CLIENTS SECTION ===== -->
+  <section class="section-sungarner-clients">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h5 class="text-uppercase fw-bold mb-2" style="color: var(--sungarner-primary); letter-spacing: 2px;">Our Satisfied Clients</h5>
+        <h2>Trusted by Leading Organizations</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>“We at Marvel Wires are pleased to say that selecting SunGarner Energies Ltd. as our EPC partner for the installation of a 170kWp rooftop solar power plant was an excellent decision. The quality of workmanship reflects their attention to detail and commitment to excellence.”</p>
+            <div class="client-name mt-3">Mr. M S. Negi</div>
+            <div class="client-role">Founder & CEO, Marvel Wires, India</div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>“The project was completed efficiently and has significantly reduced our energy costs. The reliability of the solar power system has been outstanding, ensuring uninterrupted power supply critical for our hospital operations.”</p>
+            <div class="client-name mt-3">Mr. Umesh Singhaniya</div>
+            <div class="client-role">Secretary, Geeta Vatika-Poddar Cancer Hospital, Gorakhpur</div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>“The SunGarner team did an exceptional job with the installation of our solar power plant at our farm house. Despite the challenges of the remote location, the installation process was smooth and efficient.”</p>
+            <div class="client-name mt-3">Mrs. Anita Thapar Kathpalia</div>
+            <div class="client-role">ATK Consultant, Former Chief of Marketing, Fabindia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SDG CAROUSEL ===== -->
+  <section class="section-sdg">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Embracing United Nations Sustainable Development Goals</h2>
+      </div>
+      <div id="sdgCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">01</div>
+                  <div class="sdg-icon"><i class="fas fa-users"></i></div>
+                  <h6>No Poverty</h6>
+                  <p>End poverty in all its forms everywhere.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">02</div>
+                  <div class="sdg-icon"><i class="fas fa-seedling"></i></div>
+                  <h6>Zero Hunger</h6>
+                  <p>End hunger, achieve food security and improved nutrition.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">03</div>
+                  <div class="sdg-icon"><i class="fas fa-heartbeat"></i></div>
+                  <h6>Good Health & Well Being</h6>
+                  <p>Ensure healthy lives and promote well-being for all.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">04</div>
+                  <div class="sdg-icon"><i class="fas fa-book-open"></i></div>
+                  <h6>Quality Education</h6>
+                  <p>Ensure inclusive and equitable quality education.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">05</div>
+                  <div class="sdg-icon"><i class="fas fa-venus"></i></div>
+                  <h6>Gender Equality</h6>
+                  <p>Achieve gender equality and empower all women and girls.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">06</div>
+                  <div class="sdg-icon"><i class="fas fa-tint"></i></div>
+                  <h6>Clean Water & Sanitation</h6>
+                  <p>Ensure availability and sustainable management of water.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">07</div>
+                  <div class="sdg-icon"><i class="fas fa-sun"></i></div>
+                  <h6>Affordable & Clean Energy</h6>
+                  <p>Ensure access to affordable, reliable, sustainable energy.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">08</div>
+                  <div class="sdg-icon"><i class="fas fa-chart-line"></i></div>
+                  <h6>Decent Work & Economic Growth</h6>
+                  <p>Promote sustained, inclusive and sustainable economic growth.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">09</div>
+                  <div class="sdg-icon"><i class="fas fa-building"></i></div>
+                  <h6>Industry, Innovation & Infrastructure</h6>
+                  <p>Build resilient infrastructure and foster innovation.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">10</div>
+                  <div class="sdg-icon"><i class="fas fa-balance-scale"></i></div>
+                  <h6>Reduced Inequalities</h6>
+                  <p>Reduce inequality within and among countries.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">11</div>
+                  <div class="sdg-icon"><i class="fas fa-city"></i></div>
+                  <h6>Sustainable Cities & Communities</h6>
+                  <p>Make cities and human settlements inclusive and safe.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">12</div>
+                  <div class="sdg-icon"><i class="fas fa-recycle"></i></div>
+                  <h6>Responsible Consumption & Production</h6>
+                  <p>Ensure sustainable consumption and production patterns.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                <div class="sdg-card">
+                  <div class="sdg-number">13</div>
+                  <div class="sdg-icon"><i class="fas fa-globe"></i></div>
+                  <h6>Climate Action</h6>
+                  <p>Take urgent action to combat climate change and its impacts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#sdgCarousel" data-bs-slide="prev" style="width: 5%;">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#sdgCarousel" data-bs-slide="next" style="width: 5%;">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTS CAROUSEL ===== -->
+  <section class="section-events">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h5 class="text-uppercase fw-bold mb-2" style="color: var(--avaada-primary); letter-spacing: 2px;">Connecting Together for a Brighter Tomorrow</h5>
+        <h2>Explore Our Events</h2>
+      </div>
+      <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-4 col-md-6">
+                <div class="event-card">
+                  <img src="https://www.avaada.com/wp-content/uploads/Ag-features-images-files.webp" alt="Event">
+                  <div class="event-body">
+                    <div class="event-location">New Delhi</div>
+                    <h5>Millionaire Farmer of India (MFOI) Awards 2025</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="event-card">
+                  <img src="https://www.avaada.com/wp-content/uploads/MSKVY-2.0.jpg.webp" alt="Event">
+                  <div class="event-body">
+                    <div class="event-location">Maharashtra</div>
+                    <h5>Avaada Showcases Clean Energy Excellence at 11 MSKYV Solar Projects</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="event-card">
+                  <img src="https://www.avaada.com/wp-content/uploads/Ag-4.jpg.webp" alt="Event">
+                  <div class="event-body">
+                    <div class="event-location">New Delhi</div>
+                    <h5>6th International Energy Conference & Exhibition, 2025</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-4 col-md-6">
+                <div class="event-card">
+                  <img src="https://www.avaada.com/wp-content/uploads/Ag-3.jpg.webp" alt="Event">
+                  <div class="event-body">
+                    <div class="event-location">Vadodara</div>
+                    <h5>PM Narendra Modi Inaugurates Avaada's 280 MW Solar Project in Gujarat</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="event-card">
+                  <img src="https://www.avaada.com/wp-content/uploads/Rajasthan-Event.jpg.webp" alt="Event">
+                  <div class="event-body">
+                    <div class="event-location">Rajasthan</div>
+                    <h5>PM Lays Foundation for 2500 MWh BESS Project + 1560 MWp Solar</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="event-card">
+                  <img src="https://www.avaada.com/wp-content/uploads/Avaada-Group-signs-MoU-with-Gujarat-Govt.webp" alt="Event">
+                  <div class="event-body">
+                    <div class="event-location">Gandhinagar</div>
+                    <h5>Avaada Group Signs MoU with Gujarat Govt for 5 GW Solar</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev" style="width: 5%;">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next" style="width: 5%;">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNER SECTION ===== -->
+  <section class="section-partner">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h5 class="text-uppercase fw-bold mb-2" style="color: var(--avaada-primary); letter-spacing: 2px;">Partner With Us</h5>
+        <h2>Partnering for Sustainable Solutions</h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-3 col-md-6">
+          <div class="partner-icon-box">
+            <div class="p-icon"><i class="fas fa-leaf"></i></div>
+            <h6>Renewable Energy</h6>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="partner-icon-box">
+            <div class="p-icon"><i class="fas fa-industry"></i></div>
+            <h6>Solar PV Manufacturing</h6>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="partner-icon-box">
+            <div class="p-icon"><i class="fas fa-flask"></i></div>
+            <h6>Green Fuels</h6>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="partner-icon-box">
+            <div class="p-icon"><i class="fas fa-battery-full"></i></div>
+            <h6>Energy Storage Solutions</h6>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-avaada">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS / MAP SECTION ===== -->
+  <section class="section-projects">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="projects-map-wrap">
+            <img src="https://www.avaada.com/wp-content/uploads/India-Map-workout.png.webp" alt="Avaada Projects Across India" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h5 class="text-uppercase fw-bold mb-2" style="color: var(--avaada-primary); letter-spacing: 2px;">Our Projects</h5>
+          <h2 class="mb-4">Powering Progress, Energizing India</h2>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="state-legend-item">
+                <div class="color-bar" style="background: #A7DF5D;"></div>
+                <div>
+                  <h6>Rajasthan</h6>
+                  <p>2116 MWp Commissioned<br>1960 MWp Under Implementation</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="state-legend-item">
+                <div class="color-bar" style="background: #FCAC60;"></div>
+                <div>
+                  <h6>Maharashtra</h6>
+                  <p>2011.43 MWp Commissioned<br>1811 MWp Under Implementation</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="state-legend-item">
+                <div class="color-bar" style="background: #D75178;"></div>
+                <div>
+                  <h6>Gujarat</h6>
+                  <p>1575 MWp Commissioned<br>981 MWp Under Implementation</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="state-legend-item">
+                <div class="color-bar" style="background: #BC6AFF;"></div>
+                <div>
+                  <h6>Karnataka</h6>
+                  <p>792.56 MWp Commissioned</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="state-legend-item">
+                <div class="color-bar" style="background: #284798;"></div>
+                <div>
+                  <h6>Bihar</h6>
+                  <p>71.75 MWp Commissioned</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="state-legend-item">
+                <div class="color-bar" style="background: #FF823C;"></div>
+                <div>
+                  <h6>Uttar Pradesh</h6>
+                  <p>169 MWp Commissioned</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="state-legend-item">
+                <div class="color-bar" style="background: #A7DF5D;"></div>
+                <div>
+                  <h6>Haryana</h6>
+                  <p>50 MWp Commissioned</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="state-legend-item">
+                <div class="color-bar" style="background: #F95367;"></div>
+                <div>
+                  <h6>Tamil Nadu</h6>
+                  <p>65 MWp Commissioned</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="state-legend-item">
+                <div class="color-bar" style="background: #3CCCFF;"></div>
+                <div>
+                  <h6>Madhya Pradesh</h6>
+                  <p>279 MWp Commissioned</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-avaada mt-4">View Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIFE AT AVAADA ===== -->
+  <section class="section-life">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h5 class="text-uppercase fw-bold mb-2" style="color: var(--avaada-primary); letter-spacing: 2px;">Join Our Team</h5>
+        <h2>Life at Avaada</h2>
+        <p class="mt-3 mx-auto" style="max-width: 600px;">Avaada thrives on "Promise" and "Values" uniting for sustainable infrastructure to nurture Mother Earth</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="life-card">
+            <div class="life-icon"><i class="fas fa-globe-asia"></i></div>
+            <h5>Global Energy Transition Ambition</h5>
+            <p>Join Avaada in the collective pursuit of a global energy transition shaping the future of humanity.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="life-card">
+            <div class="life-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <h5>Work-Life Harmony Initiative</h5>
+            <p>At Avaada, we prioritize & safeguard the work/life balance of our employees, fostering a harmonious professional journey.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="life-card">
+            <div class="life-icon"><i class="fas fa-home"></i></div>
+            <h5>Avaada: Your Second Home</h5>
+            <p>Experience a workplace where your hard work and dedication are valued. Avaada strives to make your professional environment a second home.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-avaada">Discover More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWS / BLOG SECTION ===== -->
+  <section class="section-news">
+    <div class="container">
+      <ul class="nav nav-pills news-tabs justify-content-center mb-5" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="blogs-tab" data-bs-toggle="pill" data-bs-target="#blogs" type="button">Blogs</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="news-tab" data-bs-toggle="pill" data-bs-target="#news" type="button">News</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="videos-tab" data-bs-toggle="pill" data-bs-target="#videos" type="button">Videos</button>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <!-- Blogs Tab -->
+        <div class="tab-pane fade show active" id="blogs">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="news-card">
+                <img src="https://www.avaada.com/wp-content/uploads/Harnessing-Renewable-Energy.webp" alt="Blog">
+                <div class="news-body">
+                  <div class="news-meta">Wind Energy · Sep 9, 2026</div>
+                  <h6>Wind Power Projects: Harnessing Renewable Energy for a Sustainable Future</h6>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="news-card">
+                <img src="https://www.avaada.com/wp-content/uploads/Green-Ammonia-Powering-Global-Supply-Chains.webp" alt="Blog">
+                <div class="news-body">
+                  <div class="news-meta">Green Fuels · Sep 9, 2026</div>
+                  <h6>From Agriculture to Maritime Fuel: How Green Ammonia Is Reshaping Global Supply Chains</h6>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="news-card">
+                <img src="https://www.avaada.com/wp-content/uploads/GreenAmmonia-vs-GreenMethanol.webp" alt="Blog">
+                <div class="news-body">
+                  <div class="news-meta">Green Fuels · Sep 9, 2026</div>
+                  <h6>Green Ammonia vs Green Methanol: Which Clean Fuel Will Power the Future?</h6>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- News Tab -->
+        <div class="tab-pane fade" id="news">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="news-card">
+                <img src="https://www.avaada.com/wp-content/uploads/The-Battery-magazine.jpg.webp" alt="News">
+                <div class="news-body">
+                  <div class="news-meta">Sep 21, 2026</div>
+                  <h6>CM Fadnavis Hails Avaada Superfactory in Nagpur, Calls for Regional Investment</h6>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="news-card">
+                <img src="https://www.avaada.com/wp-content/uploads/Solar-Quarter.jpg.webp" alt="News">
+                <div class="news-body">
+                  <div class="news-meta">Sep 21, 2026</div>
+                  <h6>Avaada's 3 GW Solar Cell Facility in Nagpur Draws Fadnavis Praise</h6>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="news-card">
+                <img src="https://www.avaada.com/wp-content/uploads/Energitica.jpg.webp" alt="News">
+                <div class="news-body">
+                  <div class="news-meta">Sep 21, 2026</div>
+                  <h6>Avaada Nagpur Superfactory Among Asia's Best, Says CM Fadnavis</h6>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Videos Tab -->
+        <div class="tab-pane fade" id="videos">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/MNfM3v_Bxn4" title="Avaada Video" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/TPrdbHRDyk8" title="Avaada Video" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/rkjIUonNm3Y" title="Avaada Video" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-avaada">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <img src="https://www.avaada.com/wp-content/uploads/White-Logo.png.webp" alt="Avaada" height="57" class="mb-4">
+          <p style="font-size: 0.9rem; max-width: 320px;">Avaada Group is a Clean Energy Conglomerate that strategically integrates Solar, Wind, Hydro & Battery Energy Storage System (BESS), providing clean, affordable, round-the-clock power.</p>
+          <div class="footer-social mt-4">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Youtube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h5>Businesses</h5>
+          <a href="#">Renewable Energy</a>
+          <a href="#">Solar PV Manufacturing</a>
+          <a href="#">Green Fuels</a>
+          <a href="#">Energy Storage</a>
+          <a href="#">Green Data Center</a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h5>Company</h5>
+          <a href="#">About Us</a>
+          <a href="#">Group Leadership</a>
+          <a href="#">Our Journey</a>
+          <a href="#">Awards & Accolades</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h5>SunGarner</h5>
+          <a href="#">About SunGarner</a>
+          <a href="#">Solar Inverters</a>
+          <a href="#">Batteries</a>
+          <a href="#">PV Modules</a>
+          <a href="#">E-Rickshaw Chargers</a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h5>Contact</h5>
+          <a href="#">18005713094</a>
+          <a href="#">info@sungarner.com</a>
+          <a href="#">www.sungarner.com</a>
+          <a href="#">Seltrik.com</a>
+          <a href="#">Tenders</a>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p>&copy; 2026 Avaada & SunGarner | All rights reserved</p>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ===== Counter Animation =====
+    document.addEventListener('DOMContentLoaded', function() {
+      const counters = document.querySelectorAll('.stat-number');
+      const speed = 2000;
+
+      const animateCounter = (el) => {
+        const target = parseFloat(el.dataset.count);
+        const decimals = parseInt(el.dataset.decimal || 0);
+        const duration = speed;
+        const start = performance.now();
+
+        const step = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = (eased * target).toFixed(decimals);
+          el.textContent = current + (decimals === 0 ? '+' : '');
+          if (progress < 1) requestAnimationFrame(step);
+          else {
+            el.textContent = target.toFixed(decimals) + (decimals === 0 ? '+' : '');
+          }
+        };
+        requestAnimationFrame(step);
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(c => observer.observe(c));
+    });
+
+    // ===== Theme Toggle =====
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const icon = themeToggle.querySelector('i');
+
+    const savedTheme = localStorage.getItem('avaada-theme') || 'light';
+    html.setAttribute('data-bs-theme', savedTheme);
+    updateIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-bs-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-bs-theme', next);
+      localStorage.setItem('avaada-theme', next);
+      updateIcon(next);
+    });
+
+    function updateIcon(theme) {
+      icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    // ===== Navbar Scroll Effect =====
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      if (window.scrollY > 50) {
+        nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
